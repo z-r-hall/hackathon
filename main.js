@@ -47,7 +47,7 @@ fetch("https://motivational-quote-api.herokuapp.com/quotes/random")
     .then((data) => {
       change(data);
     });
-  }
+}
 
 function change(data) {
   // fetchFunc();
@@ -61,32 +61,38 @@ function change(data) {
         card = card.parentNode;
         j++;
       }
-
-      // '._1O4jTk-dZ-VIxsCuYB6OR8'
       const redditMan = document.querySelector('._1tvdSTbdxaK-BnUbzUIqIY')
       redditMan.innerHTML = 'CODESMITH';
-      document.body.style.marginTop = "0";
       redditMan.style.fontWeight = "600"
       redditMan.style.fontSize = "35px"
       redditMan.style.backgroundColor = "white";
       redditMan.style.textAlign = "center"
-      redditMan.style.padding = "0";
       redditMan.style.justifyContent = "center"
-      redditMan.style.marginTop = "0";
-      // redditMan.append()  
-
-
       const img2 = document.createElement('img');
+      redditMan.style.borderBottom = '5px solid navy'
+      redditMan.style.paddingBottom = '10px'
+      redditMan.style.paddingTop = '10px'
       img2.setAttribute('src', 'https://www.codesmith.io/hubfs/raw_assets/public/codesmith-website/images/codesmith-logo.png');
       redditMan.append(img2)
       redditMan.style.height = "auto"
-      img2.style.width = "10%"
+      img2.style.width = "5%"
+      img2.style.marginLeft = "20px"
+
+      const span = document.createElement('span');
+      span.style.marginLeft = "20px"
+      span.innerHTML = 'Cohort 36 & 37'
+      redditMan.append(span);
+
+      // const span2 = document.createElement('span');
+      // span2.style.marginLeft = "20px"
+      // span2.innerHTML = 'Cohort 36'
+      // redditMan.append(span2);
+      
       const img = document.createElement('img');
       img.setAttribute('src', `${cohortmates[Math.floor(Math.random()*32)]}`);
       card.innerHTML = `Cohorts 36 & 37 say: ${data}`;
       card.appendChild(img);
       card.style.textAlign = "center";
-      // card.style.fontWeight = "bold";
       card.style.color = "black";
       card.style.fontSize = "24px";
       card.style.fontFamily = "times new roman";
